@@ -30,12 +30,14 @@ li {
   list-style: none;
 }
 
+
+
 .header {
-  background: no-repeat center url("../images/bg-header-desktop.svg");
+  background: repeat-x center url("../images/bg-header-desktop.svg");
   background-color: var(--primary-clr);
   height: 157px;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 
@@ -44,7 +46,6 @@ li {
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(44, 58, 58, 0.1);
 
-    
   width: 78%;
   max-width: 1100px;
   margin: 0 auto 2rem;
@@ -57,10 +58,6 @@ li {
 
 /* CARD________________________________________________________________________ */
 
-
-
-.card {
-}
 
 .card--featured {
   border-left: 5px solid var(--primary-clr);
@@ -100,7 +97,7 @@ li {
 .info__new, .info__featured {
   color: white;
   background: var(--dark-gray-cyan);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   padding: 0.7em;
   padding-bottom: 0.3em;
@@ -158,7 +155,7 @@ li {
 
 .tablets li {
   font-weight: 700;;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   background: var(--tablets-clr);
   border-radius: 5px;
   transition: var(--transition);
@@ -171,7 +168,7 @@ li {
 }
 
 .categories__tablets.tablets li {
-  padding: 0.7em 0.5em 0.5em;
+  padding: 0.85em 0.65em 0.6em;
   margin-left: 1rem;
 }
 
@@ -180,8 +177,6 @@ li {
   color: white;
   cursor: pointer;
 }
-
-
 
 
 /* FILTER________________________________________________________________________ */
@@ -217,7 +212,8 @@ li {
 
 .filter {
   position: relative;
-  bottom: 100px;
+  bottom: 140px;
+  margin-bottom: -92px;
 }
 
 .filter__clear {
@@ -232,3 +228,122 @@ li {
   text-decoration: underline;
 }
 
+
+
+  /* SMALL SCREENS________________________________________________________________________ */
+@media (max-width: 1200px) {
+
+  .info__position {
+    font-size: 1.1rem;
+  }
+  
+  .info__list li {
+    font-size: 0.9rem;
+  }
+
+  /* TABLETS_________________ */
+    .tablets {
+    flex-wrap: wrap;
+  }
+
+  .categories__tablets.tablets li {
+    margin-left: 0;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    padding-right:1.5rem;
+  }
+
+  .filter__tablets li {
+    margin-bottom: 1rem;
+  }
+
+
+}
+
+@media (max-width: 1020px) {
+
+  /* CARD________________________________________________________________________ */
+
+  .header {
+    margin-bottom: 4rem;
+  }
+
+  /* CARD________________________________________________________________________ */
+
+  .card, .filter {
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+    width: 90%;
+  }
+  
+  .card {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem 0;
+    margin-bottom: 3rem;
+  }
+
+  
+  /* INFO___________________ */
+  .info {
+    width: 100%;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .info__logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -61px;
+    left: 0;
+  }
+  
+  .info::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--gray-cyan);
+  }
+
+  /* FILTER________________________________________________________________________ */
+  .filter {
+    padding: 1rem 1.5rem 0;
+  }
+
+  .filter__clear {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .header {
+    background: no-repeat center url("../images/bg-header-mobile.svg");
+    background-color: var(--primary-clr);
+}
+
+
+/* ATTRIBUTION________________________________________________________________________ */
+.wrapper {
+  min-height: calc(100vh - 20px);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+  height: 20px;
+}
+
+.attribution a {
+  color: var(--primary-clr);
+}

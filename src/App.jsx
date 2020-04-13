@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/Card.jsx";
 import Filter from "./components/Filter.jsx";
+import { v4 as uuid } from "uuid";
 
 const data = require("./data.json");
 
@@ -64,30 +65,38 @@ function App() {
 
   return (
     <div>
-      <div class="header"></div>
-      {filters.length !== 0 &&
-        <Filter
-          filters={filters}
-          removeFilter={removeFilter}
-          clearFilters={clearFilters}
-        />}
+      <div className="wrapper">
+        <div className="header"></div>
+        {filters.length !== 0 &&
+          <Filter
+            filters={filters}
+            removeFilter={removeFilter}
+            clearFilters={clearFilters}
+          />}
 
-      {filters.length < 1
-        ? data.map(ad => {
-          return (<Card
-            id={ad.id}
-            ad={ad}
-            addFilter={addFilter}
-          />)
-        })
-        : adList.map(ad => {
-          return (<Card
-            id={ad.id}
-            ad={ad}
-            addFilter={addFilter}
-          />)
-        })}
+        {filters.length < 1
+          ? data.map(ad => {
+            return (<Card
+              key={uuid()}
+              id={ad.id}
+              ad={ad}
+              addFilter={addFilter}
+            />)
+          })
+          : adList.map(ad => {
+            return (<Card
+              key={uuid()}
+              id={ad.id}
+              ad={ad}
+              addFilter={addFilter}
+            />)
+          })}
 
+
+      </div>
+      <div className="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by Tom Dolton.</div>
     </div>
   )
 }
