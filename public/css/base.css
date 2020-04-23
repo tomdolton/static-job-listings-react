@@ -17,7 +17,6 @@
 
 body {
   background: var(--bg-clr);
-
 }
 
 h1, h2, h3, li, button {
@@ -332,6 +331,8 @@ li {
 }
 
 
+
+}
 /* ATTRIBUTION________________________________________________________________________ */
 .wrapper {
   min-height: calc(100vh - 20px);
@@ -340,9 +341,10 @@ li {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: auto;
+  margin: 4rem auto 0.5rem;
   height: 20px;
 }
+
 
 .attribution a {
   color: var(--primary-clr);

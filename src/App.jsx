@@ -96,7 +96,8 @@ function App() {
       </div>
       <div className="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by Tom Dolton.</div>
+        Coded by Tom Dolton.
+      </div>
     </div>
   )
 }
